@@ -23,13 +23,10 @@ public class HelloAndroid extends Activity implements View.OnClickListener
         setContentView(button);
     }
 
-    public void onClick(View view)
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) 
     {
-    	updateTime();
-    }
-    
-    private void updateTime()
-    {
-    	button.setText(new Date().toString());
+        getMenuInflater().inflate(R.menu.activity_hello_android, menu);
+        return true;
     }
 }

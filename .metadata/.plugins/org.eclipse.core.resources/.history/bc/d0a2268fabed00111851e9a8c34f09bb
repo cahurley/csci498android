@@ -15,21 +15,13 @@ public class HelloAndroid extends Activity implements View.OnClickListener
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
-        
-        button = new Button(this);
-        button.setOnClickListener(this);
-        updateTime();
-        
-        setContentView(button);
+        setContentView(R.layout.activity_hello_android);
     }
 
-    public void onClick(View view)
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) 
     {
-    	updateTime();
-    }
-    
-    private void updateTime()
-    {
-    	button.setText(new Date().toString());
+        getMenuInflater().inflate(R.menu.activity_hello_android, menu);
+        return true;
     }
 }
