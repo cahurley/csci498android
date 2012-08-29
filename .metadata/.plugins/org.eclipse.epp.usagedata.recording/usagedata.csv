@@ -101,3 +101,28 @@ processors,sysinfo,,,"8",1346200026029
 java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1346200026029
 java.runtime.version,sysinfo,,,"1.7.0_05-b06",1346200026029
 java.specification.name,sysinfo,,,"Java Platform API Specification",1346200026029
+java.specification.vendor,sysinfo,,,"Oracle Corporation",1346200026029
+java.specification.version,sysinfo,,,"1.7",1346200026029
+java.vendor,sysinfo,,,"Oracle Corporation",1346200026029
+java.version,sysinfo,,,"1.7.0_05",1346200026029
+java.vm.info,sysinfo,,,"mixed mode",1346200026029
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1346200026029
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1346200026029
+java.vm.specification.vendor,sysinfo,,,"Oracle Corporation",1346200026029
+java.vm.specification.version,sysinfo,,,"1.7",1346200026029
+java.vm.vendor,sysinfo,,,"Oracle Corporation",1346200026029
+java.vm.version,sysinfo,,,"23.1-b03",1346200026029
+started,bundle,com.android.ide.eclipse.traceview,20.0.2.v201207191942-407447,"com.android.ide.eclipse.traceview",1346200029118
+opened,view,org.eclipse.ui.ide,3.7.0.I20110519-0100,"org.eclipse.ui.views.ProblemView",1346200029518
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1346200029524
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1346200081819
+opened,editor,org.eclipse.jdt.ui,3.7.0.v20110531-1200,"org.eclipse.jdt.ui.CompilationUnitEditor",1346200087080
+started,bundle,org.eclipse.jdt.debug,3.7.0.v20110509,"org.eclipse.jdt.debug",1346200087418
+started,bundle,org.eclipse.jdt.debug.ui,3.6.0.v20110512,"org.eclipse.jdt.debug.ui",1346200087474
+activated,editor,org.eclipse.jdt.ui,3.7.0.v20110531-1200,"org.eclipse.jdt.ui.CompilationUnitEditor",1346200087527
+closed,editor,com.android.ide.eclipse.adt,20.0.2.v201207191942-407447,"com.android.ide.eclipse.editors.CommonXmlEditor",1346200087529
+started,bundle,org.eclipse.jdt.junit,3.7.0.v20110505-0800,"org.eclipse.jdt.junit",1346200087581
+started,bundle,org.eclipse.jdt.apt.core,3.3.500.v20110420-1015,"org.eclipse.jdt.apt.core",1346200087888
+started,bundle,org.eclipse.core.variables,3.2.500.v20110511,"org.eclipse.core.variables",1346200087989
+activated,view,org.eclipse.jdt.ui,3.7.0.v20110531-1200,"org.eclipse.jdt.ui.PackageExplorer",1346200088389
+closed,editor,org.eclipse.jdt.ui,3.7.0.v20110531-1200,"org.eclipse.jdt.ui.CompilationUnitEditor",1346200088389
