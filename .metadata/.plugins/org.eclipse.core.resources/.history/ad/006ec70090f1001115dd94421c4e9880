@@ -1,0 +1,30 @@
+package csci498.cahurley.lunchlist;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.Button;
+
+public class MainActivity extends Activity 
+{
+	Restaurant restaurant = new Restaurant();
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) 
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        Button saveButton = (Button)findViewById(R.id.save_button);
+        
+        saveButton.setOnClickListener(onSave);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) 
+    {
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        return true;
+    }
+    
+}
