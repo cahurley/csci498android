@@ -8,3 +8,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2012-08-23 22:54:31.109
 !MESSAGE Failed to load properties file for project 'HelloAndroid'
+
+!ENTRY org.eclipse.ui 4 4 2012-08-23 23:31:08.854
+!MESSAGE Invalid preference page path: XML Syntax
