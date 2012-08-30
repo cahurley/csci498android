@@ -39,7 +39,6 @@ public class MainActivity extends Activity
     {	
 		public void onClick(View v) 
 		{
-			Restaurant restaurant = new Restaurant();
 			EditText name = (EditText)findViewById(R.id.name_edit_text);
 			EditText address = (EditText)findViewById(R.id.address_edit_text);
 			
@@ -47,6 +46,7 @@ public class MainActivity extends Activity
 			restaurant.setAddress(address.getText().toString());
 			
 			RadioGroup types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
+			
 			switch(types.getCheckedRadioButtonId())
 			{
 				case R.id.sit_down:

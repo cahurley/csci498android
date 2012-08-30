@@ -47,6 +47,7 @@ public class MainActivity extends Activity
 			restaurant.setAddress(address.getText().toString());
 			
 			RadioGroup types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
+			
 			switch(types.getCheckedRadioButtonId())
 			{
 				case R.id.sit_down:
