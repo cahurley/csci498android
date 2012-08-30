@@ -24,7 +24,7 @@ public class MainActivity extends Activity
         TextView nameText = (TextView)findViewById(R.id.name_text);
         TextView addressText = (TextView)findViewById(R.id.address_text);
         
-        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/molten.ttf");
+        Typeface font = Typeface.createFromAsset(getAssets(), "molten.ttf");
         nameText.setTypeface(font);
         addressText.setTypeface(font);
     }
