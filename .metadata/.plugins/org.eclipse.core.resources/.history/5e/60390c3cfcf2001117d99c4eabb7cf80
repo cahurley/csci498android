@@ -60,14 +60,6 @@
 	            android:text="C" />
 	        <RadioButton
 	            android:text="D" />
-	        <RadioButton
-	            android:text="E" />
-	        <RadioButton
-	            android:text="F" />
-	        <RadioButton
-	            android:text="G" />
-	        <RadioButton
-	            android:text="H" />
 	    </RadioGroup>
 	</TableRow>
 	<Button

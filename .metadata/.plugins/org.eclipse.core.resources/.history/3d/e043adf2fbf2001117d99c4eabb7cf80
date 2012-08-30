@@ -42,7 +42,7 @@
 	        android:textStyle="bold" />
 	    <RadioGroup
 	        android:id="@+id/types_of_restaurants_radio">
-	    	<RadioButton
+	    <!--<RadioButton
 	            android:id="@+id/take_out"
 	            android:text="Take-Out"
 	            android:checked="true" />
@@ -51,23 +51,7 @@
 	            android:text="Sit-Down" />
 	        <RadioButton
 	            android:id="@+id/delivery"
-	            android:text="Delivery" />
-	        <RadioButton
-	            android:text="A" />
-	        <RadioButton
-	            android:text="B" />
-	        <RadioButton
-	            android:text="C" />
-	        <RadioButton
-	            android:text="D" />
-	        <RadioButton
-	            android:text="E" />
-	        <RadioButton
-	            android:text="F" />
-	        <RadioButton
-	            android:text="G" />
-	        <RadioButton
-	            android:text="H" />
+	            android:text="Delivery" />-->
 	    </RadioGroup>
 	</TableRow>
 	<Button
