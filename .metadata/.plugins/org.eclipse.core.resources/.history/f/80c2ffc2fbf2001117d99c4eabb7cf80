@@ -68,13 +68,13 @@ public class MainActivity extends Activity
 			
 			switch(types.getCheckedRadioButtonId())
 			{
-				case 1:
+				case R.id.sit_down:
 					restaurant.setType("sit_down");
 					break;
-				case 0:
+				case R.id.take_out:
 					restaurant.setType("take_out");
 					break;
-				case 2:
+				case R.id.delivery:
 					restaurant.setType("delivery");
 					break;
 			}

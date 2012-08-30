@@ -51,8 +51,8 @@
 	            android:text="Sit-Down" />
 	        <RadioButton
 	            android:id="@+id/delivery"
-	            android:text="Delivery" />-->
-	    </RadioGroup>
+	            android:text="Delivery" />
+	    </RadioGroup>-->
 	</TableRow>
 	<Button
 	    android:id="@+id/save_button"

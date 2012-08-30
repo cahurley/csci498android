@@ -36,16 +36,13 @@ public class MainActivity extends Activity
         RadioGroup types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
         
         RadioButton takeOut = new RadioButton(this);
-        takeOut.setId(0);
         takeOut.setText("Take Out");
         takeOut.setChecked(true);
         
         RadioButton sitDown = new RadioButton(this);
-        takeOut.setId(1);
         sitDown.setText("Sit Down");
         
         RadioButton delivery = new RadioButton(this);
-        takeOut.setId(2);
         delivery.setText("Delivery");
         
         types.addView(takeOut);
@@ -63,21 +60,22 @@ public class MainActivity extends Activity
 			restaurant.setName(name.getText().toString());
 			restaurant.setAddress(address.getText().toString());
 			
-			
+			/*
 			RadioGroup types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
 			
 			switch(types.getCheckedRadioButtonId())
 			{
-				case 1:
+				case R.id.sit_down:
 					restaurant.setType("sit_down");
 					break;
-				case 0:
+				case R.id.take_out:
 					restaurant.setType("take_out");
 					break;
-				case 2:
+				case R.id.delivery:
 					restaurant.setType("delivery");
 					break;
 			}
+			*/
 		}
 	};
 	

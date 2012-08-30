@@ -40,9 +40,9 @@
 	        android:text="Type:"
 	        android:textColor="#BD0814"
 	        android:textStyle="bold" />
-	    <RadioGroup
+	    <!-- <RadioGroup
 	        android:id="@+id/types_of_restaurants_radio">
-	    <!--<RadioButton
+	        <RadioButton
 	            android:id="@+id/take_out"
 	            android:text="Take-Out"
 	            android:checked="true" />
@@ -51,8 +51,8 @@
 	            android:text="Sit-Down" />
 	        <RadioButton
 	            android:id="@+id/delivery"
-	            android:text="Delivery" />-->
-	    </RadioGroup>
+	            android:text="Delivery" />
+	    </RadioGroup>-->
 	</TableRow>
 	<Button
 	    android:id="@+id/save_button"
