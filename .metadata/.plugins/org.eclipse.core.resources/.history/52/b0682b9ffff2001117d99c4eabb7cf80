@@ -33,11 +33,10 @@
 		        android:textColor="#BD0814"
 		        android:textStyle="bold" />
 		   	<AutoCompleteTextView
-		        android:id="@+id/address_auto_complete_text"
+		        android:id="@+id/address_auto_complete_text_view"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:inputType="text"
-		        android:completionThreshold="1" />
+		        android:inputType="text" />
 		</TableRow>
 		<TableRow>
 		    <TextView

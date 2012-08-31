@@ -23,7 +23,7 @@ public class MainActivity extends Activity implements TextWatcher
 	List<String> restaurantAddresses = new ArrayList<String>();
 	List<Restaurant> restaurantList = new ArrayList<Restaurant>();
 	ArrayAdapter<Restaurant> adapter = null;
-	Context context = this;
+	Context textWatcher = this;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -56,8 +56,8 @@ public class MainActivity extends Activity implements TextWatcher
 			EditText name = (EditText)findViewById(R.id.name_edit_text);
 			
 			AutoCompleteTextView address = (AutoCompleteTextView)findViewById(R.id.address_auto_complete_text);
-			address.addTextChangedListener((TextWatcher)context);
-			address.setAdapter(new ArrayAdapter<String>(context, android.R.layout.simple_dropdown_item_1line, restaurantAddresses));
+			address.addTextChangedListener(textWatcher);
+			address.setAdapter(new ArrayAdapter<String>(textWatcher, android.R.layout.simple_dropdown_item_1line, restaurantAddresses));
 			
 			restaurant.setName(name.getText().toString());
 			restaurant.setAddress(address.getText().toString());

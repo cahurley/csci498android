@@ -7,6 +7,7 @@ public class Restaurant
 	private String name = "";
 	private String address = "";
 	private String type = "";
+	private ArrayList<String> restaurantNames = new ArrayList<String>();
 	
 	public String getName()
 	{

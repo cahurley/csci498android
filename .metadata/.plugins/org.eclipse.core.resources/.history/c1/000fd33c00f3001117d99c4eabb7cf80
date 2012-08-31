@@ -20,10 +20,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity implements TextWatcher
 {
-	List<String> restaurantAddresses = new ArrayList<String>();
 	List<Restaurant> restaurantList = new ArrayList<Restaurant>();
 	ArrayAdapter<Restaurant> adapter = null;
-	Context context = this;
+	TextWatcher textWatcher = this;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -56,12 +55,10 @@ public class MainActivity extends Activity implements TextWatcher
 			EditText name = (EditText)findViewById(R.id.name_edit_text);
 			
 			AutoCompleteTextView address = (AutoCompleteTextView)findViewById(R.id.address_auto_complete_text);
-			address.addTextChangedListener((TextWatcher)context);
-			address.setAdapter(new ArrayAdapter<String>(context, android.R.layout.simple_dropdown_item_1line, restaurantAddresses));
+			address.addTextChangedListener(textWatcher);
 			
 			restaurant.setName(name.getText().toString());
 			restaurant.setAddress(address.getText().toString());
-			restaurantAddresses.add(address.getText().toString());
 			
 			RadioGroup types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
 			switch(types.getCheckedRadioButtonId())
