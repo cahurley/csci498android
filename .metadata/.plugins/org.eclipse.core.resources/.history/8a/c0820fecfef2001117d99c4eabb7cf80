@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends Activity 
@@ -28,9 +28,9 @@ public class MainActivity extends Activity
         Button saveButton = (Button)findViewById(R.id.save_button);
         saveButton.setOnClickListener(onSave);
         
-        Spinner spinner = (Spinner)findViewById(R.id.restaurants);
+        ListView list = (ListView)findViewById(R.id.restaurants);
         adapter = new ArrayAdapter<Restaurant>(this, android.R.layout.simple_list_item_1, restaurantList);
-        spinner.setAdapter(adapter);
+        list.setAdapter(adapter);
         
         TextView nameText = (TextView)findViewById(R.id.name_text);
         TextView addressText = (TextView)findViewById(R.id.address_text);
