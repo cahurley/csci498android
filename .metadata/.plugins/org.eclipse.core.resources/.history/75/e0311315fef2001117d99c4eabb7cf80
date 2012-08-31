@@ -6,7 +6,7 @@
 	<TableLayout
 	    android:id="@+id/details"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_height="match_parent"
 		android:layout_alignParentBottom="true"
 		android:stretchColumns="1"
 		android:shrinkColumns="1" >
@@ -58,6 +58,22 @@
 		        <RadioButton
 		            android:id="@+id/delivery"
 		            android:text="Delivery" />
+		        <RadioButton
+		            android:text="A" />
+		        <RadioButton
+		            android:text="B" />
+		        <RadioButton
+		            android:text="C" />
+		        <RadioButton
+		            android:text="D" />
+		        <RadioButton
+		            android:text="E" />
+		        <RadioButton
+		            android:text="F" />
+		        <RadioButton
+		            android:text="G" />
+		        <RadioButton
+		            android:text="H" />
 		    </RadioGroup>
 		</TableRow>
 		<Button

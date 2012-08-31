@@ -66,8 +66,6 @@ public class MainActivity extends Activity
 					restaurant.setType("delivery");
 					break;
 			}
-			
-			adapter.add(restaurant);
 		}
 	};
 	
