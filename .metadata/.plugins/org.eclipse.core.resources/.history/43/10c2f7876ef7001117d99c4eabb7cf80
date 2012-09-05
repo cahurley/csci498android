@@ -135,7 +135,7 @@ public class LunchList extends Activity implements TextWatcher
 				holder = (RestaurantHolder)row.getTag();
 			}
 			
-			holder.populateFrom(model.get(position));
+			holder.populateFrom(restaurantList.get(position));
 			return(row);
 		}
 	}

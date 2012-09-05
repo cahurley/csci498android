@@ -23,7 +23,7 @@ import android.widget.TextView;
 public class LunchList extends Activity implements TextWatcher
 {
 	List<String> restaurantAddresses = new ArrayList<String>();
-	List<Restaurant> model = new ArrayList<Restaurant>();
+	List<Restaurant> restaurantList = new ArrayList<Restaurant>();
 	RestaurantAdapter adapter = null;
 	
     @Override
@@ -114,7 +114,7 @@ public class LunchList extends Activity implements TextWatcher
 	{
 		public RestaurantAdapter() 
 		{
-			super(LunchList.this, R.layout.restaurant_row, model);
+			super(LunchList.this, R.layout.restaurant_row, restaurantList);
 		}
 		
 		public View getView(int position, View convertView, ViewGroup parent)
@@ -135,7 +135,7 @@ public class LunchList extends Activity implements TextWatcher
 				holder = (RestaurantHolder)row.getTag();
 			}
 			
-			holder.populateFrom(model.get(position));
+			holder.populateFrom(restaurantList.get(position));
 			return(row);
 		}
 	}
