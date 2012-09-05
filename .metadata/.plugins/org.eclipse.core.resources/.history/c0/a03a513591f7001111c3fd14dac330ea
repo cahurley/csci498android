@@ -152,19 +152,18 @@ public class LunchList extends Activity implements TextWatcher
 			address = (TextView)row.findViewById(R.id.address);
 			icon = (ImageView)row.findViewById(R.id.icon);
 			
-			customizeRestaurantAddress(name);
+			customizeRestaurantAddress(address);
 		}
 		
-		void customizeRestaurantAddress(TextView name)
+		void customizeRestaurantAddress(TextView address)
 		{
-			if(name.getText().length() > 10)
-			{
-				name.setTextAppearance(null, Typeface.ITALIC);
-			}
-			else
-			{
-				name.setTextAppearance(null, Typeface.BOLD);
-			}
+			
+			
+			
+	        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/molten.ttf");
+	        nameText.setTypeface(font);
+	        addressText.setTypeface(font);
+	        typeOfRestaurantText.setTypeface(font);
 		}
 		
 		void populateFrom(Restaurant r)
