@@ -83,23 +83,23 @@ public class LunchList extends Activity
 			restaurant.setType(getRestaurantType());
 		}
 		
-		String getRestaurantType()
-		{
-			RadioGroup types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
-			switch(types.getCheckedRadioButtonId())
-			{
-				case R.id.sit_down:
-					return("sit_down");
-				case R.id.take_out:
-					return("take_out");
-				case R.id.delivery:
-					return("delivery");
-				default:
-					return("sit_down");
-			}
-		}
-		
 	};
+	
+	private String getRestaurantType()
+	{
+		RadioGroup types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
+		switch(types.getCheckedRadioButtonId())
+		{
+			case R.id.sit_down:
+				return("sit_down");
+			case R.id.take_out:
+				return("take_out");
+			case R.id.delivery:
+				return("delivery");
+			default:
+				return("sit_down");
+		}
+	}
 	
 	class RestaurantAdapter extends ArrayAdapter<Restaurant>
 	{

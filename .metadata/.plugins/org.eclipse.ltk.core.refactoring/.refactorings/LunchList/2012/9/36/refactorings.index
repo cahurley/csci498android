@@ -5,3 +5,8 @@
 1346874235759	Delete element
 1346874237493	Delete element
 1346995399992	Rename resource 'restaurant_row.xml'
+1347044638449	Rename resource 'sit_down_row.xml'
+1347044686768	Delete element
+1347044690849	Delete element
+1347044877887	Rename method 'configureButton'
+1347044983801	Rename field 'model'

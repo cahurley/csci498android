@@ -32,11 +32,12 @@
 		        android:text="Address:"
 		        android:textColor="#BD0814"
 		        android:textStyle="bold" />
-		   	<EditText
-		        android:id="@+id/address_edit_text"
+		   	<AutoCompleteTextView
+		        android:id="@+id/address_auto_complete_text"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:inputType="text" />
+		        android:inputType="text"
+		        android:completionThreshold="1" />
 		</TableRow>
 		<TableRow>
 		    <TextView

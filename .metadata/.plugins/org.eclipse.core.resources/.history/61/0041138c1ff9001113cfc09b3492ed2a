@@ -24,7 +24,8 @@ import android.widget.TextView;
 
 public class LunchList extends Activity
 {
-	List<Restaurant> restaurants = new ArrayList<Restaurant>();
+	List<String> restaurantAddresses = new ArrayList<String>();
+	List<Restaurant> model = new ArrayList<Restaurant>();
 	RestaurantAdapter adapter = null;
 	
     @Override
@@ -83,29 +84,29 @@ public class LunchList extends Activity
 			restaurant.setType(getRestaurantType());
 		}
 		
-		String getRestaurantType()
-		{
-			RadioGroup types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
-			switch(types.getCheckedRadioButtonId())
-			{
-				case R.id.sit_down:
-					return("sit_down");
-				case R.id.take_out:
-					return("take_out");
-				case R.id.delivery:
-					return("delivery");
-				default:
-					return("sit_down");
-			}
-		}
-		
 	};
+	
+	private String getRestaurantType()
+	{
+		RadioGroup types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
+		switch(types.getCheckedRadioButtonId())
+		{
+			case R.id.sit_down:
+				return("sit_down");
+			case R.id.take_out:
+				return("take_out");
+			case R.id.delivery:
+				return("delivery");
+			default:
+				return("sit_down");
+		}
+	}
 	
 	class RestaurantAdapter extends ArrayAdapter<Restaurant>
 	{
 		public RestaurantAdapter() 
 		{
-			super(LunchList.this, R.layout.restaurant_row, restaurants);
+			super(LunchList.this, R.layout.restaurant_row, model);
 		}
 		
 		public View getView(int position, View convertView, ViewGroup parent)
@@ -126,7 +127,7 @@ public class LunchList extends Activity
 				holder = (RestaurantHolder)row.getTag();
 			}
 			
-			holder.populateFrom(restaurants.get(position));
+			holder.populateFrom(model.get(position));
 			return(row);
 		}
 		
