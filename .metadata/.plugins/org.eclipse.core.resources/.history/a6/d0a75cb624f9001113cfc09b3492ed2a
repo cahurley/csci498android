@@ -77,12 +77,12 @@
 				            android:text="Delivery" />
 				    </RadioGroup>
 				</TableRow>
-				<Button
-				    android:id="@+id/save_button"
-				    android:layout_width="match_parent"
-				    android:layout_height="wrap_content"
-				    android:text="Save" />
-			</TableLayout>
+		<Button
+		    android:id="@+id/save_button"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Save" />
+	</TableLayout>
         </FrameLayout>
     </LinearLayout>
 </TabHost>
