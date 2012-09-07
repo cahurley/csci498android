@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
-import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
@@ -143,7 +141,7 @@ public class LunchList extends Activity implements TextWatcher
 		}
 	}
 	
-	class RestaurantHolder
+	static class RestaurantHolder
 	{
 		private TextView name = null;
 		private TextView address = null;
@@ -154,17 +152,19 @@ public class LunchList extends Activity implements TextWatcher
 			name = (TextView)row.findViewById(R.id.title);
 			address = (TextView)row.findViewById(R.id.address);
 			icon = (ImageView)row.findViewById(R.id.icon);
+			
+			customizeRestaurantName(name);
 		}
 		
 		void customizeRestaurantName(TextView name)
 		{
 			if(name.getText().length() > 10)
 			{
-				name.setTextColor(Color.BLUE);
+				name.setTextAppearance(null, Typeface.ITALIC);
 			}
 			else
 			{
-				name.setTextColor(Color.GREEN);
+				name.setTextAppearance(null, Typeface.BOLD);
 			}
 		}
 		
@@ -172,8 +172,6 @@ public class LunchList extends Activity implements TextWatcher
 		{
 			name.setText(r.getName());
 			address.setText(r.getAddress());
-			
-			customizeRestaurantName(name);
 			
 			if(r.getType().equals("sit_down"))
 			{

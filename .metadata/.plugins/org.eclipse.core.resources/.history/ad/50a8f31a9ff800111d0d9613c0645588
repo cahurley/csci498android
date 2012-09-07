@@ -164,7 +164,7 @@ public class LunchList extends Activity implements TextWatcher
 			}
 			else
 			{
-				name.setTextColor(Color.GREEN);
+				name.setTextAppearance(context, Typeface.BOLD);
 			}
 		}
 		

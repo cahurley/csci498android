@@ -5,7 +5,6 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
@@ -160,11 +159,11 @@ public class LunchList extends Activity implements TextWatcher
 		{
 			if(name.getText().length() > 10)
 			{
-				name.setTextColor(Color.BLUE);
+				name.setTextAppearance(context, Typeface.ITALIC);
 			}
 			else
 			{
-				name.setTextColor(Color.GREEN);
+				name.setTextAppearance(context, Typeface.BOLD);
 			}
 		}
 		
