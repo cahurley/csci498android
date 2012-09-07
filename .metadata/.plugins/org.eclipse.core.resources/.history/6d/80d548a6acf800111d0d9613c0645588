@@ -116,7 +116,7 @@ public class LunchList extends Activity implements TextWatcher
 	{
 		public RestaurantAdapter() 
 		{
-			super(LunchList.this, android.R.layout.simple_list_item_1, model);
+			super(LunchList.this, R.layout.restaurant_row, model);
 		}
 		
 		public View getView(int position, View convertView, ViewGroup parent)
