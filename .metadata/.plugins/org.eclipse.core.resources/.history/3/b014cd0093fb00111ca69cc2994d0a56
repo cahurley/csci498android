@@ -200,7 +200,6 @@ public class LunchList extends Activity
 				break;
 			}
 		}
-		return false;
 	}
 	
 	class RestaurantAdapter extends ArrayAdapter<Restaurant>

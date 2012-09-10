@@ -1,6 +1,5 @@
 package csci498.cahurley.lunchlist;
 
-import java.security.acl.LastOwnerException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -20,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -38,7 +37,7 @@ public class LunchList extends Activity
 	Restaurant currentRestaurant = null;
 	
 	private ViewFlipper vf;
-	private float lastX;
+	private Button vfButton;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -163,45 +162,6 @@ public class LunchList extends Activity
 			}
 		}
 	};
-	
-	@Override
-	public boolean onTouchEvent(MotionEvent touchevent)
-	{
-		switch(touchevent.getAction())
-		{
-			case MotionEvent.ACTION_DOWN:
-			{
-				lastX = touchevent.getX();
-				break;
-			}
-			case MotionEvent.ACTION_UP:
-			{
-				float currentX = touchevent.getX();
-				if(lastX < currentX)
-				{
-					if(vf.getDisplayedChild() == 0)
-					{
-						break;
-					}
-					vf.setInAnimation(this, R.anim.in_from_left);
-					vf.setOutAnimation(this, R.anim.out_to_right);
-					vf.showNext();
-				}
-				if(lastX > currentX)
-				{
-					if(vf.getDisplayedChild() == 1)
-					{
-						break;
-					}
-					vf.setInAnimation(this, R.anim.in_from_right);
-					vf.setInAnimation(this, R.anim.out_to_left);
-					vf.showNext();
-				}
-				break;
-			}
-		}
-		return false;
-	}
 	
 	class RestaurantAdapter extends ArrayAdapter<Restaurant>
 	{

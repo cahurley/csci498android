@@ -187,20 +187,8 @@ public class LunchList extends Activity
 					vf.setOutAnimation(this, R.anim.out_to_right);
 					vf.showNext();
 				}
-				if(lastX > currentX)
-				{
-					if(vf.getDisplayedChild() == 1)
-					{
-						break;
-					}
-					vf.setInAnimation(this, R.anim.in_from_right);
-					vf.setInAnimation(this, R.anim.out_to_left);
-					vf.showNext();
-				}
-				break;
 			}
 		}
-		return false;
 	}
 	
 	class RestaurantAdapter extends ArrayAdapter<Restaurant>

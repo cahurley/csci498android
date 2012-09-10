@@ -179,28 +179,10 @@ public class LunchList extends Activity
 				float currentX = touchevent.getX();
 				if(lastX < currentX)
 				{
-					if(vf.getDisplayedChild() == 0)
-					{
-						break;
-					}
-					vf.setInAnimation(this, R.anim.in_from_left);
-					vf.setOutAnimation(this, R.anim.out_to_right);
-					vf.showNext();
+					if(vf.getDisplayedChild() == 0) break;
 				}
-				if(lastX > currentX)
-				{
-					if(vf.getDisplayedChild() == 1)
-					{
-						break;
-					}
-					vf.setInAnimation(this, R.anim.in_from_right);
-					vf.setInAnimation(this, R.anim.out_to_left);
-					vf.showNext();
-				}
-				break;
 			}
 		}
-		return false;
 	}
 	
 	class RestaurantAdapter extends ArrayAdapter<Restaurant>
