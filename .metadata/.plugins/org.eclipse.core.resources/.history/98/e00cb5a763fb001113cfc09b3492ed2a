@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -20,7 +19,6 @@ import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class LunchList extends TabActivity
 {
@@ -50,26 +48,6 @@ public class LunchList extends TabActivity
     	new MenuInflater(this).inflate(R.menu.option, menu);
     	
     	return(super.onCreateOptionsMenu(menu));
-    }
-    
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-    	if(item.getItemId() == R.id.toast)
-    	{
-    		String message = "No restaurant selected";
-    		
-    		if(currentRestaurant != null)
-    		{
-    			message = currentRestaurant.getNotes();
-    		}
-    		
-    		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-    		
-    		return(true);
-    	}
-    	
-    	return(super.onOptionsItemSelected(item));
     }
     
     private void setMemberVariables()
@@ -152,15 +130,15 @@ public class LunchList extends TabActivity
 		{
 			currentRestaurant = restaurants.get(position);
 			
-			name.setText(currentRestaurant.getName());
-			address.setText(currentRestaurant.getAddress());
-			notes.setText(currentRestaurant.getNotes());
+			name.setText(restaurant.getName());
+			address.setText(restaurant.getAddress());
+			notes.setText(restaurant.getNotes());
 			
-			if(currentRestaurant.getType().equals("sit_down"))
+			if(restaurant.getType().equals("sit_down"))
 			{
 				types.check(R.id.sit_down);
 			}
-			else if(currentRestaurant.getType().equals("take_out"))
+			else if(restaurant.getType().equals("take_out"))
 			{
 				types.check(R.id.take_out);
 			}
