@@ -22,9 +22,6 @@ import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-/**
- * DatePicker code from http://stackoverflow.com/questions/9861483/datepickerdialog
- */
 public class LunchList extends TabActivity
 {
 	List<Restaurant> restaurants = new ArrayList<Restaurant>();
@@ -118,10 +115,10 @@ public class LunchList extends TabActivity
 		month = c.get(Calendar.MONTH);
 		day = c.get(Calendar.DAY_OF_MONTH);
 		
-		updateDisplay(dateDisplay);
+		updateDisplay();
     }
     
-    private void updateDisplay(TextView dateDisplay)
+    private void updateDisplay()
     {
     	dateDisplay.setText(new StringBuilder().append(month + 1).append("-")
     							.append(day).append("-")
@@ -135,7 +132,7 @@ public class LunchList extends TabActivity
 			year = year;
 			month = monthOfYear;
 			day = dayOfMonth;
-			updateDisplay(dateDisplay);
+			updateDisplay();
 		}
 	};
 	
@@ -165,7 +162,13 @@ public class LunchList extends TabActivity
 			restaurant.setName(name.getText().toString());
 			restaurant.setAddress(address.getText().toString());			
 			restaurant.setType(getRestaurantType());
-			restaurant.setDate(getLastVisitedDate());
+			
+			Calendar lastVisited = Calendar.getInstance();
+			lastVisited.set(Calendar.YEAR, year);
+			lastVisited.set(Calendar.MONTH, month);
+			lastVisited.set(Calendar.DAY_OF_MONTH, day);
+			
+			restaurant.setDate(lastVisited);
 		}
 		
 		String getRestaurantType()
@@ -183,16 +186,6 @@ public class LunchList extends TabActivity
 			}
 		}
 		
-		Calendar getLastVisitedDate()
-		{
-			Calendar lastVisited = Calendar.getInstance();
-			lastVisited.set(Calendar.YEAR, year);
-			lastVisited.set(Calendar.MONTH, month);
-			lastVisited.set(Calendar.DAY_OF_MONTH, day);
-			
-			return lastVisited;
-		}
-		
 	};
 	
 	private AdapterView.OnItemClickListener onListClick = new AdapterView.OnItemClickListener()
@@ -203,7 +196,6 @@ public class LunchList extends TabActivity
 			
 			name.setText(currentRestaurant.getName());
 			address.setText(currentRestaurant.getAddress());
-			updateDisplay(dateDisplay);
 			
 			if(currentRestaurant.getType().equals("sit_down"))
 			{
@@ -257,14 +249,12 @@ public class LunchList extends TabActivity
 	{
 		private TextView name = null;
 		private TextView address = null;
-		private TextView date = null;
 		private ImageView icon = null;
 		
 		public RestaurantHolder(View row) 
 		{
 			name = (TextView)row.findViewById(R.id.title);
 			address = (TextView)row.findViewById(R.id.address);
-			date = (TextView)row.findViewById(R.id.date_last_visited);
 			icon = (ImageView)row.findViewById(R.id.icon);
 		}
 		
@@ -272,8 +262,6 @@ public class LunchList extends TabActivity
 		{
 			name.setText(r.getName());
 			address.setText(r.getAddress());
-
-			updateDisplay(date);
 			
 			if(r.getType().equals("sit_down"))
 			{

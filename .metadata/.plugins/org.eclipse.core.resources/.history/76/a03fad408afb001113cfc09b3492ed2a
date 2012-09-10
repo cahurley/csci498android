@@ -22,9 +22,6 @@ import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-/**
- * DatePicker code from http://stackoverflow.com/questions/9861483/datepickerdialog
- */
 public class LunchList extends TabActivity
 {
 	List<Restaurant> restaurants = new ArrayList<Restaurant>();
@@ -135,7 +132,7 @@ public class LunchList extends TabActivity
 			year = year;
 			month = monthOfYear;
 			day = dayOfMonth;
-			updateDisplay(dateDisplay);
+			updateDisplay();
 		}
 	};
 	
@@ -203,7 +200,7 @@ public class LunchList extends TabActivity
 			
 			name.setText(currentRestaurant.getName());
 			address.setText(currentRestaurant.getAddress());
-			updateDisplay(dateDisplay);
+			d
 			
 			if(currentRestaurant.getType().equals("sit_down"))
 			{
@@ -272,8 +269,7 @@ public class LunchList extends TabActivity
 		{
 			name.setText(r.getName());
 			address.setText(r.getAddress());
-
-			updateDisplay(date);
+			date.setText(updateDisplay());
 			
 			if(r.getType().equals("sit_down"))
 			{
