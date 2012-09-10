@@ -29,6 +29,7 @@
 				android:shrinkColumns="1" >
 				<TableRow>
 				    <TextView
+				        android:id="@+id/name_text"
 				        android:layout_width="wrap_content"
 				        android:layout_height="wrap_content"
 				        android:text="Name:"
@@ -42,6 +43,7 @@
 				</TableRow>
 				<TableRow>
 				    <TextView
+				        android:id="@+id/address_text"
 				        android:layout_width="wrap_content"
 				        android:layout_height="wrap_content"
 				        android:text="Address:"
@@ -77,16 +79,7 @@
 				<TableRow>
 				    <TextView 
 				        android:text="Notes:"
-				        android:layout_width="wrap_content"
-				        android:layout_height="wrap_content"/>
-				    <EditText
-				        android:id="@+id/notes"
-				        android:singleLine="false"
-				        android:gravity="top"
-				        android:lines="2"
-				        android:scrollHorizontally="false"
-				        android:maxLines="2"
-				        android:maxWidth="200sp" />
+				        android:layout_width=""/>
 				</TableRow>
 				<Button
 				    android:id="@+id/save_button"

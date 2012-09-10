@@ -55,6 +55,7 @@
 				</TableRow>
 				<TableRow>
 				    <TextView
+				        android:id="@+id/type_of_restaurant_text"
 				        android:layout_width="wrap_content"
 				        android:layout_height="wrap_content"
 				        android:text="Type:"

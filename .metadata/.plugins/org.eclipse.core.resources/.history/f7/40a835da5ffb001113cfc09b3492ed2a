@@ -36,6 +36,7 @@ public class LunchList extends TabActivity
         
         configureSaveButton();
         configureList();
+        setTextViewTypeFaces();
         
         configureTabs();
     }

@@ -36,6 +36,7 @@ public class LunchList extends TabActivity
         
         configureSaveButton();
         configureList();
+        setTextViewTypeFaces();
         
         configureTabs();
     }
@@ -60,6 +61,18 @@ public class LunchList extends TabActivity
         list.setAdapter(adapter);
         
         list.setOnItemClickListener(onListClick);
+    }
+    
+    private void setTextViewTypeFaces()
+    {
+        TextView nameText = (TextView)findViewById(R.id.name_text);
+        TextView addressText = (TextView)findViewById(R.id.address_text);
+        TextView typeOfRestaurantText = (TextView)findViewById(R.id.type_of_restaurant_text);
+        
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/molten.ttf");
+        nameText.setTypeface(font);
+        addressText.setTypeface(font);
+        typeOfRestaurantText.setTypeface(font);
     }
     
     private void configureTabs()
