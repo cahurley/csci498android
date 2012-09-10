@@ -1,8 +1,0 @@
-package csci498.cahurley.lunchlist;
-
-import android.widget.ArrayAdapter;
-
-public class RestaurantAdapter extends ArrayAdapter<Restaurant> 
-{
-
-}
