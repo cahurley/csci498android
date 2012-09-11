@@ -31,7 +31,6 @@ public class LunchList extends TabActivity
 	RadioGroup types = null;
 	EditText notes = null;
 	Restaurant currentRestaurant = null;
-	int currentTab = 0;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -48,6 +47,10 @@ public class LunchList extends TabActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
+    	MenuItem tabItem = (MenuItem)findViewById(R.id.other_tab);
+    	tabItem.setTitle("Details");
+    	tabItem.setIcon(R.drawable.restaurant_tab_icon);
+    
     	new MenuInflater(this).inflate(R.menu.option, menu);
     	
     	return(super.onCreateOptionsMenu(menu));
@@ -68,23 +71,6 @@ public class LunchList extends TabActivity
     		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     		
     		return(true);
-    	}
-    	else
-    	{
-    		if(currentTab == 0)
-    		{
-    			currentTab = 1;
-    			getTabHost().setCurrentTab(1);
-    			item.setTitle("List");
-    			item.setIcon(R.drawable.list_tab_icon);
-    		}
-    		else
-    		{
-    			currentTab = 0;
-    			getTabHost().setCurrentTab(0);
-    			item.setTitle("Details");
-    			item.setIcon(R.drawable.restaurant_tab_icon);
-    		}
     	}
     	
     	return(super.onOptionsItemSelected(item));

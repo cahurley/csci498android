@@ -6,6 +6,5 @@
         android:icon="@drawable/toast" />
     <item
         android:id="@+id/other_tab" 
-        android:title="Details"
-        android:icon="@drawable/restaurant_tab_icon"/>
+        android:title="blah"/>
 </menu>

@@ -31,7 +31,7 @@ public class LunchList extends TabActivity
 	RadioGroup types = null;
 	EditText notes = null;
 	Restaurant currentRestaurant = null;
-	int currentTab = 0;
+	int currentTab = 1;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -68,23 +68,6 @@ public class LunchList extends TabActivity
     		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     		
     		return(true);
-    	}
-    	else
-    	{
-    		if(currentTab == 0)
-    		{
-    			currentTab = 1;
-    			getTabHost().setCurrentTab(1);
-    			item.setTitle("List");
-    			item.setIcon(R.drawable.list_tab_icon);
-    		}
-    		else
-    		{
-    			currentTab = 0;
-    			getTabHost().setCurrentTab(0);
-    			item.setTitle("Details");
-    			item.setIcon(R.drawable.restaurant_tab_icon);
-    		}
     	}
     	
     	return(super.onOptionsItemSelected(item));

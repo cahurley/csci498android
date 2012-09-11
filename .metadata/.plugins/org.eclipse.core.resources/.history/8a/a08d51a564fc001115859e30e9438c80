@@ -82,8 +82,6 @@ public class LunchList extends TabActivity
     		{
     			currentTab = 0;
     			getTabHost().setCurrentTab(0);
-    			item.setTitle("Details");
-    			item.setIcon(R.drawable.restaurant_tab_icon);
     		}
     	}
     	
