@@ -77,8 +77,6 @@ public class LunchList extends TabActivity
 				}
 			});
     		
-    		notesDialog.show();
-    		
     		return(true);
     	}
     	

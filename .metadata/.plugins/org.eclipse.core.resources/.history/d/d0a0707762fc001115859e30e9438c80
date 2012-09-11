@@ -65,7 +65,7 @@ public class LunchList extends TabActivity
     			message = currentRestaurant.getNotes();
     		}
     		
-    		final AlertDialog notesDialog = new AlertDialog.Builder(this).create();
+    		AlertDialog notesDialog = new AlertDialog.Builder(this).create();
     		notesDialog.setTitle(String.format("%s Notes", currentRestaurant.getName()));
     		notesDialog.setMessage(currentRestaurant.getNotes());
     		
@@ -76,8 +76,6 @@ public class LunchList extends TabActivity
 					notesDialog.dismiss();
 				}
 			});
-    		
-    		notesDialog.show();
     		
     		return(true);
     	}

@@ -3,9 +3,7 @@ package csci498.cahurley.lunchlist;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.AlertDialog;
 import android.app.TabActivity;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,6 +20,7 @@ import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LunchList extends TabActivity
 {
@@ -65,19 +64,7 @@ public class LunchList extends TabActivity
     			message = currentRestaurant.getNotes();
     		}
     		
-    		final AlertDialog notesDialog = new AlertDialog.Builder(this).create();
-    		notesDialog.setTitle(String.format("%s Notes", currentRestaurant.getName()));
-    		notesDialog.setMessage(currentRestaurant.getNotes());
-    		
-    		notesDialog.setButton("Ok", new DialogInterface.OnClickListener()
-    		{	
-				public void onClick(DialogInterface dialog, int which) 
-				{
-					notesDialog.dismiss();
-				}
-			});
-    		
-    		notesDialog.show();
+    		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     		
     		return(true);
     	}
