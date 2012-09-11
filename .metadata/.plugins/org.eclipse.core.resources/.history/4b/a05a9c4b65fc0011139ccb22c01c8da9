@@ -4,8 +4,4 @@
         android:id="@+id/toast"
         android:title="Raise Toast"
         android:icon="@drawable/toast" />
-    <item
-        android:id="@+id/divide_by_zero"
-        android:title="Divide by Zero"
-        android:icon="@drawable/divide_by_zero" />
 </menu>

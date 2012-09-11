@@ -92,8 +92,6 @@ public class LunchList extends TabActivity
 						divideByZeroDialog.dismiss();
 					}
 				});
-    			
-    			divideByZeroDialog.show();
     		}
     	}
     	

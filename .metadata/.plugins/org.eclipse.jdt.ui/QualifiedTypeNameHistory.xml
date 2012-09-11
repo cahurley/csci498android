@@ -19,4 +19,5 @@
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="java.security.acl.LastOwnerException"/>
 <fullyQualifiedTypeName name="csci498.cahurley.lunchlist.R.anim"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
 </qualifiedTypeNameHistroy>

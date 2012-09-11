@@ -1,0 +1,5 @@
+package csci498.cahurley.lunchlist;
+
+public class DivideByZeroException {
+
+}

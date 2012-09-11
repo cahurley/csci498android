@@ -81,7 +81,7 @@ public class LunchList extends TabActivity
     		catch (ArithmeticException aEx)
     		{
     			Log.e("", "ArithmeticException: Cannot Divide by Zero!");
-    			final AlertDialog divideByZeroDialog = new AlertDialog.Builder(this).create();
+    			AlertDialog divideByZeroDialog = new AlertDialog.Builder(this).create();
     			divideByZeroDialog.setTitle("ArithmeticException");
     			divideByZeroDialog.setMessage("Cannot Divide by Zero!");
     			
@@ -89,11 +89,9 @@ public class LunchList extends TabActivity
     			{	
 					public void onClick(DialogInterface dialog, int which) 
 					{
-						divideByZeroDialog.dismiss();
+						
 					}
 				});
-    			
-    			divideByZeroDialog.show();
     		}
     	}
     	

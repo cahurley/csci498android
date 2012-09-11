@@ -3,9 +3,7 @@ package csci498.cahurley.lunchlist;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.AlertDialog;
 import android.app.TabActivity;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -81,19 +79,6 @@ public class LunchList extends TabActivity
     		catch (ArithmeticException aEx)
     		{
     			Log.e("", "ArithmeticException: Cannot Divide by Zero!");
-    			final AlertDialog divideByZeroDialog = new AlertDialog.Builder(this).create();
-    			divideByZeroDialog.setTitle("ArithmeticException");
-    			divideByZeroDialog.setMessage("Cannot Divide by Zero!");
-    			
-    			divideByZeroDialog.setButton("Ok", new DialogInterface.OnClickListener()
-    			{	
-					public void onClick(DialogInterface dialog, int which) 
-					{
-						divideByZeroDialog.dismiss();
-					}
-				});
-    			
-    			divideByZeroDialog.show();
     		}
     	}
     	
