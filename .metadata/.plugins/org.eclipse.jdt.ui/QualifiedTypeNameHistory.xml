@@ -13,8 +13,10 @@
 <fullyQualifiedTypeName name="csci498.cahurley.lunchlist.R.menu"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="csci498.cahurley.lunchlist.R.id"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.app.DatePickerDialog"/>
 <fullyQualifiedTypeName name="android.app.DatePickerDialog.OnDateSetListener"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="java.security.acl.LastOwnerException"/>
+<fullyQualifiedTypeName name="csci498.cahurley.lunchlist.R.anim"/>
 </qualifiedTypeNameHistroy>
