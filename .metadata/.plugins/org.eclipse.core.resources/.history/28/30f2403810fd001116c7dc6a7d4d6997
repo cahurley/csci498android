@@ -90,7 +90,7 @@ public class LunchList extends TabActivity
     	}
     	else if(item.getItemId() == R.id.run)
     	{
-    		new Thread(longTask).start();
+    		
     	}
     	
     	return(super.onOptionsItemSelected(item));

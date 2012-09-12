@@ -59,10 +59,10 @@ public class LunchList extends TabActivity
     	{
     		for(int i = 0; i < 20; i++)
     		{
-    			doSomeLongWork(500);
+    			doSomeLongWork(500)
     		}
     	}
-    };
+    }
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -87,10 +87,6 @@ public class LunchList extends TabActivity
     		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     		
     		return(true);
-    	}
-    	else if(item.getItemId() == R.id.run)
-    	{
-    		new Thread(longTask).start();
     	}
     	
     	return(super.onOptionsItemSelected(item));

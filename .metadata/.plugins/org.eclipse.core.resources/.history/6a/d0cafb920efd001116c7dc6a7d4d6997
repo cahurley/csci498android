@@ -5,7 +5,6 @@ import java.util.List;
 
 import android.app.TabActivity;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -33,7 +32,6 @@ public class LunchList extends TabActivity
 	RadioGroup types = null;
 	EditText notes = null;
 	Restaurant currentRestaurant = null;
-	int progress;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -47,22 +45,6 @@ public class LunchList extends TabActivity
         configureList();
         configureTabs();
     }
-    
-    private void doSomeLongWork(final int increment)
-    {
-    	SystemClock.sleep(250);
-    }
-    
-    private Runnable longTask = new Runnable()
-    {
-    	public void run()
-    	{
-    		for(int i = 0; i < 20; i++)
-    		{
-    			doSomeLongWork(500);
-    		}
-    	}
-    };
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -87,10 +69,6 @@ public class LunchList extends TabActivity
     		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     		
     		return(true);
-    	}
-    	else if(item.getItemId() == R.id.run)
-    	{
-    		new Thread(longTask).start();
     	}
     	
     	return(super.onOptionsItemSelected(item));
