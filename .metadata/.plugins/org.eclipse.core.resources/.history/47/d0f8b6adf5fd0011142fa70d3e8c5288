@@ -78,7 +78,7 @@ public class LunchList extends TabActivity
     			{
     				setProgressBarVisibility(false);
     				TextView name = (TextView)findViewById(R.id.name_text);
-    				name.setTextColor(Color.BLUE);
+    				name.setTextColor(Color.RED);
     			}
     		});
     	}

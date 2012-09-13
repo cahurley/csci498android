@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.TabActivity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.LayoutInflater;
@@ -35,6 +34,7 @@ public class LunchList extends TabActivity
 	EditText notes = null;
 	Restaurant currentRestaurant = null;
 	int progress;
+	int currentTab = 0;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -77,8 +77,8 @@ public class LunchList extends TabActivity
     			public void run()
     			{
     				setProgressBarVisibility(false);
-    				TextView name = (TextView)findViewById(R.id.name_text);
-    				name.setTextColor(Color.BLUE);
+    				
+    				if(curr)
     			}
     		});
     	}
@@ -217,7 +217,8 @@ public class LunchList extends TabActivity
 				types.check(R.id.delivery);
 			}
 			
-			getTabHost().setCurrentTab(1);
+			currentTab = 1;
+			getTabHost().setCurrentTab(currentTab);
 		}
 	};
 	
