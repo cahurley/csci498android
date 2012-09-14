@@ -85,27 +85,26 @@ public class LunchList extends TabActivity
     		}
     	}
     };
+
     
     @Override
-    public void onPause()
+	protected void onStop() 
     {
-    	super.onPause();
-    	
-    	isActive.set(false);
-    }
-    
-    @Override
-    public void onResume()
-    {
-    	super.onResume();
-    	
-    	isActive.set(true);
-    	
-    	if(progress > 0)
-    	{
-    		startWork();
-    	}
-    }
+		super.onStop();
+		isActive.set(false);
+	}
+
+	@Override
+	protected void onStart() 
+	{
+		super.onStart();
+		isActive.set(true);
+		
+		if(progress > 0)
+		{
+			startWork();
+		}
+	}
     
     private void startWork()
     {
