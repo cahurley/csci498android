@@ -2,9 +2,11 @@ package csci498.cahurley.lunchlist;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import android.app.TabActivity;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -32,6 +34,8 @@ public class LunchList extends TabActivity
 	RadioGroup types = null;
 	EditText notes = null;
 	Restaurant currentRestaurant = null;
+	int progress;
+	AtomicBoolean isActive = new AtomicBoolean(true);
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -44,6 +48,82 @@ public class LunchList extends TabActivity
         configureSaveButton();
         configureList();
         configureTabs();
+    }
+    
+    private void doSomeLongWork(final int increment)
+    {
+    	runOnUiThread(new Runnable()
+    	{
+    		public void run()
+    		{
+    			progress += increment;
+    			setProgress(progress);
+    		}
+    	});
+    	
+    	SystemClock.sleep(250);
+    }
+    
+    private Runnable longTask = new Runnable()
+    {
+    	public void run()
+    	{
+    		for(int i = progress; i < 10000 && isActive.get(); i+=200)
+    		{
+    			doSomeLongWork(200);
+    		}
+    		
+    		if(isActive.get())
+    		{
+	    		runOnUiThread(new Runnable()
+	    		{
+	    			public void run()
+	    			{
+	    				setProgressBarVisibility(false);
+	    			}
+	    		});
+    		}
+    	}
+    };
+    
+    @Override
+    public void onPause()
+    {
+    	super.onPause();
+    	
+    	isActive.set(false);
+    }
+    
+    @Override
+    public void onResume()
+    {
+    	super.onResume();
+    	
+    	isActive.set(true);
+    	
+    	if(progress > 0)
+    	{
+    		startWork();
+    	}
+    }
+    
+    
+    @Override
+	protected void onStop() 
+    {
+		super.onStop();
+	}
+
+	@Override
+	protected void onStart() 
+	{
+		super.onStart();
+	}
+
+	private void startWork()
+    {
+    	setProgressBarVisibility(true);
+    	new Thread(longTask).start();
     }
     
     @Override
@@ -67,6 +147,12 @@ public class LunchList extends TabActivity
     		}
     		
     		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    		
+    		return(true);
+    	}
+    	else if(item.getItemId() == R.id.run)
+    	{
+    		startWork();
     		
     		return(true);
     	}
