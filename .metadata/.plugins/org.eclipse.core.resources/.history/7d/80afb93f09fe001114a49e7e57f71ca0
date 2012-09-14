@@ -41,12 +41,6 @@ public class LunchList extends TabActivity
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
-        
-        if(savedInstanceState != null)
-        {
-        	progress = savedInstanceState.getInt("progress");
-        }
-        
         requestWindowFeature(Window.FEATURE_PROGRESS);
         setContentView(R.layout.activity_main);
         setMemberVariables();
@@ -54,6 +48,8 @@ public class LunchList extends TabActivity
         configureSaveButton();
         configureList();
         configureTabs();
+        
+        progress = savedInstanceState.getInt("progress");
     }
     
     @Override
