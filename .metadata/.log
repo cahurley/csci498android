@@ -1420,3 +1420,32 @@ java.lang.RuntimeException: Could not create tab content because could not find 
 
 !ENTRY org.eclipse.ui 4 4 2012-09-12 13:15:08.766
 !MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY org.eclipse.jdt.core 4 4 2012-09-13 17:50:29.111
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.OutOfMemoryError: Requested array size exceeds VM limit
+	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:38)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:634)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:459)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:451)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:541)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:192)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:774)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:816)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:546)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:388)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.ui 4 4 2012-09-13 17:50:35.582
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-09-13 17:50:39.512 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-13 17:50:43.012
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

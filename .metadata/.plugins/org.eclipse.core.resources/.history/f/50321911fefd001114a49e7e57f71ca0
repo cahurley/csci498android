@@ -2,7 +2,6 @@ package csci498.cahurley.lunchlist;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import android.app.TabActivity;
 import android.os.Bundle;
@@ -35,7 +34,6 @@ public class LunchList extends TabActivity
 	EditText notes = null;
 	Restaurant currentRestaurant = null;
 	int progress;
-	AtomicBoolean isActive = new AtomicBoolean(true);
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -68,50 +66,20 @@ public class LunchList extends TabActivity
     {
     	public void run()
     	{
-    		for(int i = progress; i < 10000 && isActive.get(); i+=200)
+    		for(int i = progress; i < 10000; i+=200)
     		{
-    			doSomeLongWork(200);
+    			doSomeLongWork(500);
     		}
     		
-    		if(isActive.get())
+    		runOnUiThread(new Runnable()
     		{
-	    		runOnUiThread(new Runnable()
-	    		{
-	    			public void run()
-	    			{
-	    				setProgressBarVisibility(false);
-	    			}
-	    		});
-    		}
+    			public void run()
+    			{
+    				setProgressBarVisibility(false);
+    			}
+    		});
     	}
     };
-    
-    @Override
-    public void onPause()
-    {
-    	super.onPause();
-    	
-    	isActive.set(false);
-    }
-    
-    @Override
-    public void onResume()
-    {
-    	super.onResume();
-    	
-    	isActive.set(true);
-    	
-    	if(progress > 0)
-    	{
-    		startWork();
-    	}
-    }
-    
-    private void startWork()
-    {
-    	setProgressBarVisibility(true);
-    	new Thread(longTask).start();
-    }
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -139,7 +107,9 @@ public class LunchList extends TabActivity
     	}
     	else if(item.getItemId() == R.id.run)
     	{
-    		startWork();
+    		setProgressBarVisibility(true);
+    		progress = 0;
+    		new Thread(longTask).start();
     		
     		return(true);
     	}

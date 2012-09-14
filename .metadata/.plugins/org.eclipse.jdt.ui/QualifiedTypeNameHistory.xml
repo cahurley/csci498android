@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.graphics.Typeface"/>
-<fullyQualifiedTypeName name="android.graphics.Color"/>
 <fullyQualifiedTypeName name="csci498.cahurley.lunchlist.R.layout"/>
 <fullyQualifiedTypeName name="android.widget.TabHost"/>
 <fullyQualifiedTypeName name="android.widget.TabHost.TabSpec"/>
@@ -12,7 +11,6 @@
 <fullyQualifiedTypeName name="android.widget.AdapterView.OnItemClickListener"/>
 <fullyQualifiedTypeName name="csci498.cahurley.lunchlist.R.menu"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
-<fullyQualifiedTypeName name="csci498.cahurley.lunchlist.R.id"/>
 <fullyQualifiedTypeName name="android.app.DatePickerDialog"/>
 <fullyQualifiedTypeName name="android.app.DatePickerDialog.OnDateSetListener"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
@@ -24,4 +22,9 @@
 <fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
 <fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
+<fullyQualifiedTypeName name="android.view.Window"/>
+<fullyQualifiedTypeName name="android.os.SystemClock"/>
+<fullyQualifiedTypeName name="csci498.cahurley.lunchlist.R.id"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="android.os.Handler"/>
 </qualifiedTypeNameHistroy>
