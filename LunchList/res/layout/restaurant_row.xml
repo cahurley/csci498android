@@ -9,7 +9,7 @@
         android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:contentDescription="restaurant icon"
+        android:contentDescription="@string/icon_content_description"
         android:layout_marginRight="4dip" />
     <LinearLayout 
         android:layout_width="match_parent"
