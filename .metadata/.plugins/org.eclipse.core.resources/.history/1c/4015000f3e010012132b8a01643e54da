@@ -43,17 +43,7 @@ public class LunchList extends TabActivity
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_PROGRESS);
         setContentView(R.layout.activity_main);
-        
         setMemberVariables();
-        
-        if(savedInstanceState != null)
-        {
-        	name.setText(savedInstanceState.getString("name_text_field"));
-        	address.setText(savedInstanceState.getString("address_text_field"));
-        	notes.setText(savedInstanceState.getString("notes_text_field"));
-        	
-        	types.check(savedInstanceState.getInt("restaurant_type"));
-        }
         
         configureSaveButton();
         configureList();
@@ -105,18 +95,6 @@ public class LunchList extends TabActivity
     }
     
     @Override
-	protected void onSaveInstanceState(Bundle outState) 
-    {
-		super.onSaveInstanceState(outState);
-		
-		outState.putString("name_text_field", name.getText().toString());
-		outState.putString("address_text_field", address.getText().toString());
-		outState.putString("notes_text_field", notes.getText().toString());
-		
-		outState.putInt("restaurant_type", types.getCheckedRadioButtonId());
-	}
-
-	@Override
     public void onResume()
     {
     	super.onResume();

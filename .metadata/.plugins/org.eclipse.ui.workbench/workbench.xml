@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="31" version="2.0">
+<workbench progressCount="42" version="2.0">
 <workbenchAdvisor/>
-<window height="860" width="800" x="800" y="0">
+<window height="860" width="800" x="784" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -39,6 +39,7 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
@@ -50,8 +51,11 @@
 <editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="option.xml" partName="option.xml" path="C:/Users/Caitlin/Documents/CSM/2012Fall/csci498/LunchList/res/menu/option.xml" title="option.xml" tooltip="LunchList/res/menu/option.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LunchList/res/menu/option.xml"/>
 </editor>
-<editor activePart="true" focus="true" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" partName="activity_main.xml" path="C:/Users/Caitlin/Documents/CSM/2012Fall/csci498/LunchList/res/layout-land/activity_main.xml" title="activity_main.xml" tooltip="LunchList/res/layout-land/activity_main.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LunchList/res/layout-land/activity_main.xml"/>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="restaurant_row.xml" partName="restaurant_row.xml" path="C:/Users/Caitlin/Documents/CSM/2012Fall/csci498/LunchList/res/layout/restaurant_row.xml" title="restaurant_row.xml" tooltip="LunchList/res/layout/restaurant_row.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LunchList/res/layout/restaurant_row.xml"/>
+</editor>
+<editor activePart="true" focus="true" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" partName="strings.xml" path="C:/Users/Caitlin/Documents/CSM/2012Fall/csci498/LunchList/res/values/strings.xml" title="strings.xml" tooltip="LunchList/res/values/strings.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LunchList/res/values/strings.xml"/>
 </editor>
 </editors>
 <views>
@@ -61,7 +65,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (11 items)"/>
+<category IMemento.internal.id="Warnings (19 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -120,7 +124,7 @@
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="com.android.ide.eclipse.editors.CommonXmlEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
@@ -186,6 +190,7 @@
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
@@ -193,7 +198,6 @@
 <view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
 <view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
 <view id="com.android.ide.eclipse.ddms.views.LogCatView" ratio="0.27196652"/>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29986054"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
@@ -226,7 +230,6 @@
 <page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
 <page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
@@ -245,6 +248,14 @@
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1f900bc" ratio="0.7496689" ratioLeft="566" ratioRight="189" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info part="org.eclipse.egit.ui.RepositoriesView" ratio="0.59969085" ratioLeft="388" ratioRight="259" relationship="4" relative="left"/>
@@ -355,157 +366,105 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/LunchList/src/csci498/cahurley/lunchlist/LunchList.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/LunchList/res/layout/activity_main.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/LunchList/res/layout/activity_main.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/LunchList/src/csci498/cahurley/lunchlist/LunchList.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/LunchList/res/layout-land/activity_main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/LunchList/res/values/strings.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/LunchList/res/layout/activity_main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/LunchList/src/csci498/cahurley/lunchlist/LunchList.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/LunchList/res/menu/option.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/LunchList/res/layout/restaurant_row.xml"/>
 </editors>
 <item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="2764" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="2706" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="2793" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="1503" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="1625" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="1536" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="1606" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="1889" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="1996" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="1924" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="1975" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="2072" y="0"/>
-</item>
-<item historyLabel="activity_main.xml" index="1"/>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="2072" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="0">
-<position info="not_deleted" x="1920" y="3"/>
-</item>
-<item historyLabel="activity_main.xml" index="2">
-<position info="not_deleted" x="1350" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position info="not_deleted" x="1060" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position info="not_deleted" x="1045" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position info="not_deleted" x="1857" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position info="not_deleted" x="1142" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position info="not_deleted" x="2272" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position info="not_deleted" x="2595" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position info="not_deleted" x="2658" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="3">
-<position info="not_deleted" x="2715" y="0"/>
-</item>
-<item historyLabel="LunchList.java" index="3">
 <position info="not_deleted" x="2778" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="2809" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="2836" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="2888" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="2932" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="2960" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="3250" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="1589" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="1790" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="1835" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="1845" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="1847" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="1825" y="10"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="1837" y="8"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="1325" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="1718" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="2390" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="2415" y="0"/>
 </item>
-<item historyLabel="LunchList.java" index="3">
+<item historyLabel="LunchList.java" index="0">
 <position info="not_deleted" x="2628" y="0"/>
 </item>
-<item active="true" historyLabel="activity_main.xml" index="4"/>
+<item historyLabel="activity_main.xml" index="1"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="activity_main.xml" index="1"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="activity_main.xml" index="1"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="activity_main.xml" index="3"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="activity_main.xml" index="1"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="activity_main.xml" index="3"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="activity_main.xml" index="1"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="activity_main.xml" index="3"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="activity_main.xml" index="3"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="activity_main.xml" index="1"/>
+<item historyLabel="LunchList.java" index="4">
+<position info="not_deleted" x="2628" y="0"/>
+</item>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="option.xml" index="5"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="option.xml" index="5"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="option.xml" index="5"/>
+<item historyLabel="restaurant_row.xml" index="6"/>
+<item historyLabel="strings.xml" index="2"/>
+<item historyLabel="restaurant_row.xml" index="6"/>
+<item active="true" historyLabel="strings.xml" index="2"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -525,6 +484,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="restaurant_row.xml" tooltip="LunchList/res/layout/restaurant_row.xml">
+<persistable path="/LunchList/res/layout/restaurant_row.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="LunchList/res/values/strings.xml">
+<persistable path="/LunchList/res/values/strings.xml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="LunchList/res/layout/activity_main.xml">
 <persistable path="/LunchList/res/layout/activity_main.xml"/>
 </file>
@@ -549,9 +514,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="out_to_left.xml" tooltip="LunchList/res/anim/out_to_left.xml">
 <persistable path="/LunchList/res/anim/out_to_left.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="restaurant_row.xml" tooltip="LunchList/res/layout/restaurant_row.xml">
-<persistable path="/LunchList/res/layout/restaurant_row.xml"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="LunchList/AndroidManifest.xml">
 <persistable path="/LunchList/AndroidManifest.xml"/>
 </file>
@@ -566,9 +528,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="delivery_row.xml" tooltip="LunchList/res/layout/delivery_row.xml">
 <persistable path="/LunchList/res/layout/delivery_row.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="delivery_row" tooltip="LunchList/res/layout/delivery_row">
-<persistable path="/LunchList/res/layout/delivery_row"/>
 </file>
 </mruList>
 </workbench>

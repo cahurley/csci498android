@@ -110,10 +110,12 @@ public class LunchList extends TabActivity
 		super.onSaveInstanceState(outState);
 		
 		outState.putString("name_text_field", name.getText().toString());
-		outState.putString("address_text_field", address.getText().toString());
-		outState.putString("notes_text_field", notes.getText().toString());
 		
-		outState.putInt("restaurant_type", types.getCheckedRadioButtonId());
+    	name.setText(savedInstanceState.getString("name_text_field"));
+    	address.setText(savedInstanceState.getString("address_text_field"));
+    	notes.setText(savedInstanceState.getString("notes_text_field"));
+    	
+    	types.check(savedInstanceState.getInt("restaurant_type"));
 	}
 
 	@Override

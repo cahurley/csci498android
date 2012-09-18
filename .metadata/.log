@@ -3866,3 +3866,69 @@ com.android.ddmlib.ShellCommandUnresponsiveException
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:928)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1132)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-09-17 21:07:01.937 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.help.base 4 0 2012-09-17 21:14:05.877
+!MESSAGE Help index declared, but missing for plugin org.eclipse.ocl.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2012-09-17 21:14:06.336
+!MESSAGE Help index declared, but missing for plugin org.eclipse.emf.transaction.doc.
+
+!ENTRY org.eclipse.help.base 4 4 2012-09-17 21:14:12.538
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.538
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/ui/properties/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/print/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/palette/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.emf.validation.doc/references/javadoc/overview-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/ui/palette/customize/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/editparts/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/ui/rulers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/dnd/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/ui/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/rulers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/requests/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.emf.query.doc/references/javadoc/overview-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.emf.transaction.doc/references/javadoc/dummy.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.539
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/ui/parts/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/commands/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/tools/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/ui/views/palette/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.emf.transaction.doc/references/extension-points/org_eclipse_emf_transaction_editingDomains.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/ui/palette/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/editpolicies/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/org/eclipse/gef/handles/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.emf.transaction.doc/references/extension-points/org_eclipse_emf_transaction_listeners.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2012-09-17 21:14:12.540
+!MESSAGE Help document /org.eclipse.gef.doc.isv/reference/api/overview-summary.html cannot be opened.
