@@ -48,6 +48,79 @@ public class LunchList extends TabActivity
         configureTabs();
     }
     
+    private void doSomeLongWork(final int increment)
+    {
+    	runOnUiThread(new Runnable()
+    	{
+    		public void run()
+    		{
+    			progress += increment;
+    			setProgress(progress);
+    		}
+    	});
+    	
+    	SystemClock.sleep(250);
+    }
+    
+    private Runnable longTask = new Runnable()
+    {
+    	public void run()
+    	{
+    		for(int i = progress; i < 10000; i+=200)
+    		{
+    			doSomeLongWork(200);
+    		}
+    		
+    		runOnUiThread(new Runnable()
+    		{
+    			public void run()
+    			{
+    				setProgressBarVisibility(false);
+    			}
+    		});
+    	}
+    };
+    
+    private void startWork()
+    {
+    	setProgressBarVisibility(true);
+    	new Thread(longTask).start();
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+    	new MenuInflater(this).inflate(R.menu.option, menu);
+    	
+    	return(super.onCreateOptionsMenu(menu));
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+    	if(item.getItemId() == R.id.toast)
+    	{
+    		String message = "No restaurant selected";
+    		
+    		if(currentRestaurant != null)
+    		{
+    			message = currentRestaurant.getNotes();
+    		}
+    		
+    		Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    		
+    		return(true);
+    	}
+    	else if(item.getItemId() == R.id.run)
+    	{
+    		startWork();
+    		
+    		return(true);
+    	}
+    	
+    	return(super.onOptionsItemSelected(item));
+    }
+    
     private void setMemberVariables()
     {
     	name = (EditText)findViewById(R.id.name_edit_text);
