@@ -25,7 +25,9 @@ public class LunchList extends TabActivity
 	EditText address = null;
 	RadioGroup types = null;
 	EditText notes = null;
-	RestaurantHelper helper = null;
+	Restaurant currentRestaurant = null;
+	RestaurantHelper helper;
+	int progress;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -33,7 +35,8 @@ public class LunchList extends TabActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        helper = new RestaurantHelper(this);
+        restaurants = helper.getAll();
+        startManagingCursor(restaurants);
         
         setMemberVariables();
         
@@ -67,10 +70,6 @@ public class LunchList extends TabActivity
     private void configureList()
     {
         ListView list = (ListView)findViewById(R.id.restaurants);
-        
-
-        restaurants = helper.getAll();
-        startManagingCursor(restaurants);
         adapter = new RestaurantAdapter(restaurants);
         list.setAdapter(adapter);
         

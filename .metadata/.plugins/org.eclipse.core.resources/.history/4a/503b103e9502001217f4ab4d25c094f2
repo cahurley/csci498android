@@ -67,10 +67,6 @@ public class LunchList extends TabActivity
     private void configureList()
     {
         ListView list = (ListView)findViewById(R.id.restaurants);
-        
-
-        restaurants = helper.getAll();
-        startManagingCursor(restaurants);
         adapter = new RestaurantAdapter(restaurants);
         list.setAdapter(adapter);
         
