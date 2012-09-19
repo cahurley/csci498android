@@ -102,10 +102,18 @@ public class LunchList extends TabActivity
     {	
 		public void onClick(View v) 
 		{
-			String type = getRestaurantType();
+			currentRestaurant = new Restaurant();
+			setRestaurantValues(currentRestaurant, name, address, notes);
 			
-			helper.insert(name.getText().toString(), address.getText().toString(),
-					type, notes.getText().toString());
+			adapter.add(currentRestaurant);
+		}
+		
+		void setRestaurantValues(Restaurant restaurant, EditText name, EditText address, EditText notes)
+		{
+			restaurant.setName(name.getText().toString());
+			restaurant.setAddress(address.getText().toString());			
+			restaurant.setType(getRestaurantType());
+			restaurant.setNotes(notes.getText().toString());
 		}
 		
 		String getRestaurantType()
