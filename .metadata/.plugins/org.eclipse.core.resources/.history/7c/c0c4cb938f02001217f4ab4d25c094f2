@@ -1,0 +1,9 @@
+package csci498.cahurley.lunchlist;
+
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class RestaurantHelper extends SQLiteOpenHelper
+{
+	private static final String DATABASE_NAME = "lunchlist.db";
+	
+}

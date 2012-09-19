@@ -3885,3 +3885,16 @@ java.lang.OutOfMemoryError: Requested array size exceeds VM limit
 
 !ENTRY org.eclipse.ui 4 4 2012-09-19 13:18:07.947
 !MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-09-19 13:20:38.130 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-19 13:20:43.238
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2012-09-19 13:22:24.382
+!MESSAGE Invalid preference page path: XML Syntax
