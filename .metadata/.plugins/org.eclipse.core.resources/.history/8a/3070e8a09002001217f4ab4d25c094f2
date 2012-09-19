@@ -51,14 +51,6 @@ public class LunchList extends TabActivity
         configureTabs();
     }
     
-    @Override
-    public void onDestroy()
-    {
-    	super.onDestroy();
-    	
-    	helper.close();
-    }
-    
     private void setMemberVariables()
     {
     	name = (EditText)findViewById(R.id.name_edit_text);

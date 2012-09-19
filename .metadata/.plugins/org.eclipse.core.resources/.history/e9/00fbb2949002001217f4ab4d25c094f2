@@ -42,21 +42,11 @@ public class LunchList extends TabActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        helper = new RestaurantHelper(this);
-        
         setMemberVariables();
         
         configureSaveButton();
         configureList();
         configureTabs();
-    }
-    
-    @Override
-    public void onDestroy()
-    {
-    	super.onDestroy();
-    	
-    	helper.close();
     }
     
     private void setMemberVariables()
