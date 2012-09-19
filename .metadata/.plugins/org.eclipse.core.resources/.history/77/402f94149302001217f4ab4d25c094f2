@@ -194,11 +194,11 @@ public class LunchList extends TabActivity
 			name.setText(helper.getName(cursor));
 			address.setText(helper.getAddress(cursosr));
 			
-			if(helper.getType(cursor).equals("sit_down"))
+			if(r.getType().equals("sit_down"))
 			{
 				icon.setImageResource(R.drawable.sit_down_restaurant_icon);
 			}
-			else if(helper.getType(cursor).equals("take_out"))
+			else if(r.getType().equals("take_out"))
 			{
 				icon.setImageResource(R.drawable.take_out_restaurant_icon);
 			}
