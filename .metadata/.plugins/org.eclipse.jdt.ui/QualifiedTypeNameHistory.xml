@@ -27,4 +27,7 @@
 <fullyQualifiedTypeName name="csci498.cahurley.lunchlist.R.id"/>
 <fullyQualifiedTypeName name="android.graphics.Color"/>
 <fullyQualifiedTypeName name="android.os.Handler"/>
+<fullyQualifiedTypeName name="android.database.sqlite.SQLiteDatabase"/>
+<fullyQualifiedTypeName name="csci498.cahurley.lunchlist.RestaurantHelper"/>
+<fullyQualifiedTypeName name="android.support.v4.widget.CursorAdapter"/>
 </qualifiedTypeNameHistroy>
