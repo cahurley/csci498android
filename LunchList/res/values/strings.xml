@@ -17,8 +17,8 @@
     
     <!-- List Page -->
     <string name="icon_content_description">restaurant icon</string>
+    <string name="empty_list_message">Click the MENU button to add a restaurant!</string>
     
     <!-- Menu -->
-    <string name="toast_menu_option">Raise Toast</string>
-    <string name="long_task_menu_option">Run Long Task</string>
+    <string name="add_restaurant">Add</string>
 </resources>
