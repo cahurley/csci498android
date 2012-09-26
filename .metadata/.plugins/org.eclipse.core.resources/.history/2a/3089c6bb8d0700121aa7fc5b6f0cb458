@@ -1,9 +1,7 @@
 package csci498.cahurley.lunchlist;
 
-import csci498.cahurley.lunchlist.LunchList.RestaurantAdapter;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
@@ -65,9 +63,15 @@ public class DetailForm extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-    	if(item.getItemId() == R.id.preferences)
+    	if(item.getItemId() == R.id.add)
     	{
-    		startActivity(new Intent(DetailForm.this, EditPreferences.class));
+    		startActivity(new Intent(LunchList.this, DetailForm.class));
+    		
+    		return(true);
+    	}
+    	else if(item.getItemId() == R.id.preferences)
+    	{
+    		startActivity(new Intent(LunchList.this, EditPreferences.class));
     		
     		return(true);
     	}

@@ -109,6 +109,31 @@ public class DetailForm extends Activity
     	cursor.close();
     }
     
+    private void initList()
+    {
+    	if(LunchList.restaurants != null)
+    	{
+    		stopManagingCursor(LunchList.restaurants);
+    		LunchList.restaurants.close();
+    	}
+    	
+    	LunchList.restaurants = helper.getAll(LunchList.preferences.getString("sort_order", "name"));
+    	startManagingCursor(LunchList.restaurants);
+    	LunchList.adapter = new RestaurantAdapter(LunchList.restaurants);
+    	setListAdapter(LunchList.adapter);
+    }
+	
+    private SharedPreferences.OnSharedPreferenceChangeListener preferenceListener = new SharedPreferences.OnSharedPreferenceChangeListener()
+    {	
+		public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) 
+		{
+			if(key.equals("sort_order"))
+			{
+				initList();
+			}
+		}
+	};
+    
     private View.OnClickListener onSave = new View.OnClickListener()
     {	
 		public void onClick(View v) 
