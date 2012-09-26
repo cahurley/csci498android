@@ -1,6 +1,6 @@
-#Thu Aug 23 23:31:08 MDT 2012
-logcat.view.colsize.Text=543
+#Sat Sep 22 16:47:15 MDT 2012
 logcat.view.colsize.TID=50
+logcat.view.colsize.Text=543
 logcat.view.colsize.Level=29
 ddms.logcat.automonitor.userprompt=true
 logcat.view.colsize.Application=143
@@ -9,3 +9,4 @@ logcat.view.colsize.Tag=107
 ddms.logcat.auotmonitor.level=error
 logcat.view.colsize.Time=130
 eclipse.preferences.version=1
+logcat.view.display.filters=false
