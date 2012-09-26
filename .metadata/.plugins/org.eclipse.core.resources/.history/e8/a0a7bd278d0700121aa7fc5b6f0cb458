@@ -35,7 +35,6 @@ public class LunchList extends ListActivity
         
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         helper = new RestaurantHelper(this);
-        initList();
         preferences.registerOnSharedPreferenceChangeListener(preferenceListener);
     }
     
@@ -102,7 +101,7 @@ public class LunchList extends ListActivity
 		{
 			if(key.equals("sort_order"))
 			{
-				initList();
+				
 			}
 		}
 	};
