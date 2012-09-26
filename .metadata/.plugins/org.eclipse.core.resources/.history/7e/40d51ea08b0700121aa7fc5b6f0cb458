@@ -32,9 +32,9 @@ public class RestaurantHelper extends SQLiteOpenHelper
 		// no-op, since will not be called until 2nd schema version exists
 	}
 	
-	public Cursor getAll(String orderBy)
+	public Cursor getAll()
 	{
-		return(getReadableDatabase().rawQuery(GET_ALL_FROM_DB + orderBy, null));
+		return(getReadableDatabase().rawQuery(GET_ALL_FROM_DB, null));
 	}
 	
 	public Cursor getById(String id)

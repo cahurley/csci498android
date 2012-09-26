@@ -12,7 +12,7 @@ public class RestaurantHelper extends SQLiteOpenHelper
 	private static final int SCHEMA_VERSION = 1;
 	
 	private static final String CREATE_DB_SCHEMA = "CREATE TABLE restaurants (_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, address TEXT, type TEXT, notes TEXT);";
-	private static final String GET_ALL_FROM_DB = "SELECT _id, name, address, type, notes FROM restaurants ORDER BY ";
+	private static final String GET_ALL_FROM_DB = "SELECT _id, name, address, type, notes FROM restaurants ORDER BY name";
 	private static final String GET_BY_ID_FROM_DB = "SELECT _id, name, address, type, notes FROM restaurants WHERE _ID = ?";
 	
 	public RestaurantHelper(Context context)
@@ -32,9 +32,9 @@ public class RestaurantHelper extends SQLiteOpenHelper
 		// no-op, since will not be called until 2nd schema version exists
 	}
 	
-	public Cursor getAll(String orderBy)
+	public Cursor getAll()
 	{
-		return(getReadableDatabase().rawQuery(GET_ALL_FROM_DB + orderBy, null));
+		return(getReadableDatabase().rawQuery(GET_ALL_FROM_DB, null));
 	}
 	
 	public Cursor getById(String id)

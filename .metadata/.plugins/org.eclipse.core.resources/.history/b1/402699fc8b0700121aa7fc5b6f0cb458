@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.widget.CursorAdapter;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -33,9 +32,9 @@ public class LunchList extends ListActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        
         helper = new RestaurantHelper(this);
-        restaurants = helper.getAll(preferences.getString("sort_order", "name"));
+        restaurants = helper.getAll();
         startManagingCursor(restaurants);
         adapter = new RestaurantAdapter(restaurants);
         setListAdapter(adapter);

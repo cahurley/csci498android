@@ -35,7 +35,7 @@ public class LunchList extends ListActivity
         
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         helper = new RestaurantHelper(this);
-        restaurants = helper.getAll(preferences.getString("sort_order", "name"));
+        restaurants = helper.getAll();
         startManagingCursor(restaurants);
         adapter = new RestaurantAdapter(restaurants);
         setListAdapter(adapter);
