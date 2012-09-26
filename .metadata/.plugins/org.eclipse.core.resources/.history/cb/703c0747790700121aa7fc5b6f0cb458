@@ -22,9 +22,7 @@
     <!-- Preferences -->
     <string name="sort_list_preference_title">Sort Order</string>
     <string name="sort_list_preference_summary">Choose the order the list uses</string>
-    <string name="sort_list_preference_dialog_title">Choose a sort order</string>
     
     <!-- Menu -->
     <string name="add_restaurant">Add</string>
-    <string name="settings">Settings</string>
 </resources>

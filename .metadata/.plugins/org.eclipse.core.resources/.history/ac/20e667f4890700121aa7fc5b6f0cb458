@@ -4,8 +4,4 @@
         android:id="@+id/add"
         android:title="@string/add_restaurant"
         android:icon="@drawable/ic_menu_add" />
-    <item 
-        android:id="@+id/preferences"
-        android:title="@string/settings"
-        android:icon="@drawable/ic_menu_preferences" />
 </menu>

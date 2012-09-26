@@ -1,0 +1,13 @@
+<?sml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sort_names">
+        <item>By Name, Ascending</item>
+        <item>By Name, Descending</item>
+        <item>By Type</item>
+        <item>By Address, Ascending</item>
+        <item>By Address, Descending</item>
+    </string-array>
+    <string-array name="sort_clauses">
+        
+    </string-array>
+</resources>

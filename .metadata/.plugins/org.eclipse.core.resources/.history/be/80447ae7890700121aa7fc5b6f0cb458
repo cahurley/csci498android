@@ -26,5 +26,4 @@
     
     <!-- Menu -->
     <string name="add_restaurant">Add</string>
-    <string name="settings">Settings</string>
 </resources>
