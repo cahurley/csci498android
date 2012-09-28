@@ -1,9 +1,0 @@
-package csci498.cahurley.lunchlist;
-
-import android.preference.PreferenceActivity;
-
-public class EditPreferences extends PreferenceActivity 
-{
-	@Override
-	
-}
