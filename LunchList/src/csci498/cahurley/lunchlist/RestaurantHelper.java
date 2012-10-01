@@ -9,11 +9,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class RestaurantHelper extends SQLiteOpenHelper
 {
 	private static final String DATABASE_NAME = "lunchlist.db";
-	private static final int SCHEMA_VERSION = 1;
+	private static final int SCHEMA_VERSION = 2;
 	
-	private static final String CREATE_DB_SCHEMA = "CREATE TABLE restaurants (_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, address TEXT, type TEXT, notes TEXT);";
-	private static final String GET_ALL_FROM_DB = "SELECT _id, name, address, type, notes FROM restaurants ORDER BY ";
-	private static final String GET_BY_ID_FROM_DB = "SELECT _id, name, address, type, notes FROM restaurants WHERE _ID = ?";
+	private static final String CREATE_DB_SCHEMA = "CREATE TABLE restaurants (_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, address TEXT, type TEXT, notes TEXT, feed TEXT);";
+	private static final String UPDATE_DB_SCHEMA = "ALTER TABLE restaurants ADD COLUMN feed TEXT";
+	private static final String GET_ALL_FROM_DB = "SELECT _id, name, address, type, notes, feed FROM restaurants ORDER BY ";
+	private static final String GET_BY_ID_FROM_DB = "SELECT _id, name, address, type, notes, feed FROM restaurants WHERE _ID = ?";
 	
 	public RestaurantHelper(Context context)
 	{
@@ -29,7 +30,7 @@ public class RestaurantHelper extends SQLiteOpenHelper
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
 	{
-		// no-op, since will not be called until 2nd schema version exists
+		db.execSQL(UPDATE_DB_SCHEMA);
 	}
 	
 	public Cursor getAll(String orderBy)
@@ -44,7 +45,7 @@ public class RestaurantHelper extends SQLiteOpenHelper
 		return(getReadableDatabase().rawQuery(GET_BY_ID_FROM_DB, args));
 	}
 	
-	public void insert(String name, String address, String type, String notes)
+	public void insert(String name, String address, String type, String notes, String feed)
 	{
 		ContentValues cv = new ContentValues();
 		
@@ -52,11 +53,12 @@ public class RestaurantHelper extends SQLiteOpenHelper
 		cv.put("address", address);
 		cv.put("type", type);
 		cv.put("notes", notes);
+		cv.put("feed", feed);
 		
 		getWritableDatabase().insert("restaurants", "name", cv);
 	}
 	
-	public void update(String id, String name, String address, String type, String notes)
+	public void update(String id, String name, String address, String type, String notes, String feed)
 	{
 		ContentValues cv = new ContentValues();
 		String[] args = {id};
@@ -65,28 +67,34 @@ public class RestaurantHelper extends SQLiteOpenHelper
 		cv.put("address", address);
 		cv.put("type", type);
 		cv.put("notes", notes);
+		cv.put("feed", feed);
 		
 		getWritableDatabase().update("restaurants", cv, "_ID=?", args);
 	}
 	
 	public String getName(Cursor c)
 	{
-		return(c.getString(1));
+		return c.getString(1);
 	}
 	
 	public String getAddress(Cursor c)
 	{
-		return(c.getString(2));
+		return c.getString(2);
 	}
 	
 	public String getType(Cursor c)
 	{
-		return(c.getString(3));
+		return c.getString(3);
 	}
 	
 	public String getNotes(Cursor c)
 	{
-		return(c.getString(4));
+		return c.getString(4);
+	}
+	
+	public String getFeed(Cursor c)
+	{
+		return c.getString(5);
 	}
 	
 }

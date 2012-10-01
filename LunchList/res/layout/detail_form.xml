@@ -18,7 +18,8 @@
 		        android:id="@+id/name_edit_text"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:inputType="text" />
+		        android:inputType="text"
+		        android:layout_span="2" />
         </TableRow>
         <TableRow>
 		    <TextView
@@ -31,7 +32,8 @@
 		        android:id="@+id/address_edit_text"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:inputType="text" />
+		        android:inputType="text"
+		        android:layout_span="2" />
 		</TableRow>
 		<TableRow>
    			<TextView
@@ -54,21 +56,23 @@
 		            android:text="@string/delivery_label" />
 		    </RadioGroup>
 		</TableRow>
-		<TableRow>
-		    <TextView 
-		        android:text="@string/notes_label"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"/>
-		    <EditText
-		        android:id="@+id/notes_edit_text"
-		        android:inputType="textMultiLine"
-		        android:singleLine="false"
-		        android:gravity="top"
-		        android:lines="2"
-		        android:scrollHorizontally="false"
-		        android:maxLines="2"
-		        android:maxWidth="200sp" />
-		</TableRow>
+	    <EditText
+	        android:id="@+id/notes_edit_text"
+	        android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+	        android:inputType="textMultiLine"
+	        android:singleLine="false"
+	        android:gravity="top"
+	        android:lines="2"
+	        android:scrollHorizontally="false"
+	        android:maxLines="2"
+	        android:maxWidth="200sp" 
+	        android:hint="@string/notes_label" />
+	    <EditText
+	        android:id="@+id/feed"
+	        android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+	        android:hint="@string/feed_label" />
 		<Button
 		    android:id="@+id/save_button"
 		    android:layout_width="match_parent"

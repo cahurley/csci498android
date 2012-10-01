@@ -1,18 +1,26 @@
 package csci498.cahurley.lunchlist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class DetailForm extends Activity 
 {
 	EditText name = null;
 	EditText address = null;
 	EditText notes = null;
+	EditText feed = null;
 	RadioGroup types = null;
 	RestaurantHelper helper = null;
 	String restaurantId = null;
@@ -45,22 +53,12 @@ public class DetailForm extends Activity
 		state.putInt("type", types.getCheckedRadioButtonId());
 	}
 	
-	@Override
-	public void onRestoreInstanceState(Bundle state)
-	{
-		super.onRestoreInstanceState(state);
-		
-		name.setText(state.getString("name"));
-		address.setText(state.getString("address"));
-		notes.setText(state.getString("notes"));
-		types.check(state.getInt("type"));
-	}
-	
     private void setMemberVariables()
     {
     	helper = new RestaurantHelper(this);
     	name = (EditText)findViewById(R.id.name_edit_text);
     	address = (EditText)findViewById(R.id.address_edit_text);
+    	feed = (EditText)findViewById(R.id.feed);
     	types = (RadioGroup)findViewById(R.id.types_of_restaurants_radio);
     	notes = (EditText)findViewById(R.id.notes_edit_text);
     }
@@ -71,12 +69,62 @@ public class DetailForm extends Activity
         saveButton.setOnClickListener(onSave);
     }
     
+	@Override
+	public void onRestoreInstanceState(Bundle state)
+	{
+		super.onRestoreInstanceState(state);
+		
+		name.setText(state.getString("name"));
+		address.setText(state.getString("address"));
+		notes.setText(state.getString("notes"));
+		types.check(state.getInt("type"));
+	}
+    
     @Override
     public void onDestroy()
     {
     	super.onDestroy();
     	
     	helper.close();
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+    	new MenuInflater(this).inflate(R.menu.details_option, menu);
+    	
+    	return super.onCreateOptionsMenu(menu);
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+    	if (item.getItemId() == R.id.feed)
+    	{
+    		if (isNetworkAvailable())
+    		{
+    			Intent i = new Intent(this, FeedActivity.class);
+    			
+    			i.putExtra(FeedActivity.FEED_URL, feed.getText().toString());
+    			startActivity(i);
+    		}
+    		else
+    		{
+    			Toast.makeText(this, "Sorry, the Internet is not available", Toast.LENGTH_LONG).show();
+    		}
+    		
+    		return true;
+    	}
+    	
+    	return (super.onOptionsItemSelected(item));
+    }
+    
+    private boolean isNetworkAvailable()
+    {
+    	ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(CONNECTIVITY_SERVICE);
+    	NetworkInfo info = connectivityManager.getActiveNetworkInfo();
+    	
+    	return (info != null);
     }
     
     private void load()
@@ -87,6 +135,7 @@ public class DetailForm extends Activity
     	name.setText(helper.getName(cursor));
     	address.setText(helper.getAddress(cursor));
     	notes.setText(helper.getNotes(cursor));
+    	feed.setText(helper.getFeed(cursor));
     	
     	String type = helper.getType(cursor);
     	if(type.equals("sit_down"))
@@ -113,11 +162,11 @@ public class DetailForm extends Activity
 			
 			if(restaurantId == null)
 			{
-				helper.insert(name.getText().toString(), address.getText().toString(), type, notes.getText().toString());
+				helper.insert(name.getText().toString(), address.getText().toString(), type, notes.getText().toString(), feed.getText().toString());
 			}
 			else
 			{
-				helper.update(restaurantId, name.getText().toString(), address.getText().toString(), type, notes.getText().toString());
+				helper.update(restaurantId, name.getText().toString(), address.getText().toString(), type, notes.getText().toString(), feed.getText().toString());
 			}
 			
 			finish();
