@@ -33,8 +33,6 @@ public class DetailForm extends Activity
 		
 		setMemberVariables();
 		
-		configureSaveButton();
-		
 		restaurantId = getIntent().getStringExtra(LunchList.ID_EXTRA);
 		if(restaurantId != null)
 		{
@@ -63,12 +61,6 @@ public class DetailForm extends Activity
     	notes = (EditText)findViewById(R.id.notes_edit_text);
     }
     
-    private void configureSaveButton()
-    {
-        Button saveButton = (Button)findViewById(R.id.save_button);
-        saveButton.setOnClickListener(onSave);
-    }
-    
 	@Override
 	public void onRestoreInstanceState(Bundle state)
 	{
@@ -80,6 +72,14 @@ public class DetailForm extends Activity
 		types.check(state.getInt("type"));
 	}
     
+	@Override
+	public void onPause()
+	{
+		save();
+		
+		super.onPause();
+	}
+	
     @Override
     public void onDestroy()
     {
@@ -154,12 +154,12 @@ public class DetailForm extends Activity
     	cursor.close();
     }
     
-    private View.OnClickListener onSave = new View.OnClickListener()
+    private void save()
     {	
-		public void onClick(View v) 
-		{
-			String type = getRestaurantType();
-			
+    	if (name.getText().toString().length() > 0)
+    	{
+    		String type = getRestaurantType();
+    		
 			if(restaurantId == null)
 			{
 				helper.insert(name.getText().toString(), address.getText().toString(), type, notes.getText().toString(), feed.getText().toString());
@@ -168,24 +168,22 @@ public class DetailForm extends Activity
 			{
 				helper.update(restaurantId, name.getText().toString(), address.getText().toString(), type, notes.getText().toString(), feed.getText().toString());
 			}
-			
-			finish();
-		}
-		
-		String getRestaurantType()
+    		
+    	}
+	}
+    
+	String getRestaurantType()
+	{
+		switch(types.getCheckedRadioButtonId())
 		{
-			switch(types.getCheckedRadioButtonId())
-			{
-				case R.id.sit_down:
-					return("sit_down");
-				case R.id.take_out:
-					return("take_out");
-				case R.id.delivery:
-					return("delivery");
-				default:
-					return("sit_down");
-			}
+			case R.id.sit_down:
+				return("sit_down");
+			case R.id.take_out:
+				return("take_out");
+			case R.id.delivery:
+				return("delivery");
+			default:
+				return("sit_down");
 		}
-		
-	};
+	}
 }

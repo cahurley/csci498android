@@ -14,7 +14,8 @@
     <string name="delivery_label">Delivery</string>
     <string name="notes_label">Notes:</string>
     <string name="feed_label">Feed URL</string>
-    <string name="save_button_text">Save</string>
+    <string name="location_label">Location:</string>
+    <string name="location_not_set">(not set)</string>
     
     <!-- List Page -->
     <string name="icon_content_description">restaurant icon</string>
