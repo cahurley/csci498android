@@ -110,6 +110,7 @@ public class DetailForm extends Activity
     	if (restaurantId == null)
     	{
     		menu.findItem(R.id.location).setEnabled(false);
+    		menu.findItem(R.id.map).setEnabled(false);
     	}
     	
     	return super.onPrepareOptionsMenu(menu);

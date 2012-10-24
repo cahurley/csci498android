@@ -16,6 +16,7 @@
     <string name="feed_label">Feed URL</string>
     <string name="location_label">Location:</string>
     <string name="location_not_set">(not set)</string>
+    <string name="showMap">Show on Map</string>
     
     <!-- List Page -->
     <string name="icon_content_description">restaurant icon</string>

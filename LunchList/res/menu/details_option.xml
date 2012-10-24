@@ -9,4 +9,8 @@
         android:id="@+id/location"
         android:title="@string/save_location"
         android:icon="@drawable/ic_menu_compass" />
+    <item 
+        android:id="@+id/map"
+        android:title="@string/showMap"
+        android:icon="@drawable/ic_menu_mapmode" />
 </menu>
