@@ -27,6 +27,8 @@ public class DetailForm extends Activity
 	RadioGroup types = null;
 	RestaurantHelper helper = null;
 	LocationManager locationManager = null;
+	double latitude = 0.0d;
+	double longitude = 0.0d;
 	String restaurantId = null;
 	
 	@Override
@@ -144,6 +146,11 @@ public class DetailForm extends Activity
     	else if (item.getItemId() == R.id.map)
     	{
     		Intent i = new Intent(this, RestaurantMap.class);
+    		
+    		i.putExtra(RestaurantMap.EXTRA_LATITUDE, latitude);
+    		i.putExtra(RestaurantMap.EXTRA_LONGITUDE, longitude);
+    		i.putExtra(RestaurantMap.EXTRA_NAME, name.getText().toString());
+    		
     		startActivity(i);
     		
     		return true;
@@ -170,6 +177,9 @@ public class DetailForm extends Activity
     	notes.setText(helper.getNotes(cursor));
     	feed.setText(helper.getFeed(cursor));
     	location.setText(String.format("%s, %s", String.valueOf(helper.getLatitude(cursor)), String.valueOf(helper.getLongitude(cursor))));
+    	
+    	latitude = helper.getLatitude(cursor);
+    	longitude = helper.getLongitude(cursor);
     	
     	String type = helper.getType(cursor);
     	if(type.equals("sit_down"))
