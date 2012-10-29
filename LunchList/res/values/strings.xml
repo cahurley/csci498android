@@ -36,6 +36,9 @@
     <string name="lunch_alarm_time">Lunch Alarm Time</string>
     <string name="default_time">12:00</string>
     <string name="alarm_desired_time">Set your desired time for the lunch alarm</string>
+    <string name="use_notification_key">use_notification</string>
+    <string name="use_notification_title">Use a Notification</string>
+    <string name="use_notification_summary">Check if you want a status bar icon at lunchtime, or uncheck for a full-screen notice</string>
     
     <!-- Menu -->
     <string name="add_restaurant">Add</string>
