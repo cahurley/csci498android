@@ -7,4 +7,14 @@
         android:entries="@array/sort_names"
         android:entryValues="@array/sort_clauses"
         android:dialogTitle="@string/sort_list_preference_dialog_title" />
+    <CheckBoxPreference
+        android:key="@string/alarm"
+        android:title="@string/sound_alarm"
+        android:summary="@string/alarm_summary" />
+    <csci498.cahurley.lunchlist.TimePreference
+        android:key="@string/alarm_time"
+        android:title="@string/lunch_alarm_time"
+        android:defaultValue="@string/default_time"
+        android:summary="@string/alarm_desired_time"
+        android:dependency="@string/alarm" />
 </PreferenceScreen>

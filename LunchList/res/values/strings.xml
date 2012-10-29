@@ -26,6 +26,13 @@
     <string name="sort_list_preference_title">Sort Order</string>
     <string name="sort_list_preference_summary">Choose the order the list uses</string>
     <string name="sort_list_preference_dialog_title">Choose a sort order</string>
+    <string name="alarm">alarm</string>
+    <string name="sound_alarm">Sound a Lunch Alarm</string>
+    <string name="alarm_summary">Check if you want to know when it is time for lunch</string>
+    <string name="alarm_time">alarm_time</string>
+    <string name="lunch_alarm_time">Lunch Alarm Time</string>
+    <string name="default_time">12:00</string>
+    <string name="alarm_desired_time">Set your desired time for the lunch alarm</string>
     
     <!-- Menu -->
     <string name="add_restaurant">Add</string>
