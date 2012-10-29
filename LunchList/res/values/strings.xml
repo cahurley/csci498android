@@ -22,6 +22,9 @@
     <string name="icon_content_description">restaurant icon</string>
     <string name="empty_list_message">Click the MENU button to add a restaurant!</string>
     
+    <!-- Alarm Page -->
+    <string name="time_for_lunch">It\'s time for lunch!</string>
+    
     <!-- Preferences -->
     <string name="sort_list_preference_title">Sort Order</string>
     <string name="sort_list_preference_summary">Choose the order the list uses</string>
