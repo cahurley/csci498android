@@ -11,7 +11,10 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
-    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="false"/>
+    <supports-screens
+        android:largeScreens="true" 
+        android:normalScreens="true" 
+        android:smallScreens="false"/>
 
     <application
         android:icon="@drawable/restaurant_icon"
@@ -35,12 +38,27 @@
         
         <service android:name=".FeedService"></service>
         
-        <receiver android:name=".OnBootReceiver" android:enabled="false">
+        <receiver 
+            android:name=".OnBootReceiver" 
+            android:enabled="false">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action 
+                    android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         <receiver android:name=".OnAlarmReceiver"></receiver>
+        <receiver 
+            android:name=".AppWidget"
+            android:label="@string/app_name"
+            android:icon="@drawable/icon">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
     </application>
 
 </manifest>
