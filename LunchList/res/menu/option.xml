@@ -9,4 +9,8 @@
         android:id="@+id/preferences"
         android:title="@string/settings"
         android:icon="@drawable/ic_menu_preferences" />
+    <item
+        android:id="@+id/help"
+        android:title="@string/help"
+        android:icon="@drawable/ic_menu_help" />
 </menu>
