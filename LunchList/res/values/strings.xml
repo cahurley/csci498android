@@ -40,6 +40,9 @@
     <string name="use_notification_key">use_notification</string>
     <string name="use_notification_title">Use a Notification</string>
     <string name="use_notification_summary">Check if you want a status bar icon at lunchtime, or uncheck for a full-screen notice</string>
+    <string name="alarm_ringtone">alarm_ringtone</string>
+    <string name="alarm_ringtone_title">Alarm Ringtone</string>
+    <string name="alarm_ringtone_summary">Indicate the ringtone to play when it is lunchtime</string>
     
     <!-- Menu -->
     <string name="add_restaurant">Add</string>
